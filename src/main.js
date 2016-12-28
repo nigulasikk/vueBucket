@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import App from './App'
 import Page1 from './views/Page1'
 import Page2 from './views/Page2'
+import Hello from './components/Hello'
 Vue.use(VueRouter)
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -12,8 +13,14 @@ Vue.use(VueRouter)
 // 或者，只是一个组件配置对象。
 // 我们晚点再讨论嵌套路由。
 const routes = [
-  { path: '/foo', component: Page1 },
-  { path: '/bar', component: Page2 }
+  { path: '/page1',
+    component: Page1,
+    children: [
+        { path: '', component: Hello }
+        // ...其他子路由
+    ]
+  },
+  { path: '/page2', component: Page2 }
 ]
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
