@@ -26,7 +26,7 @@
          <!-- <router-link to="/page1"> </router-link> -->
       </el-col>
       <el-col :span="20">
-       <transition name="fade">
+       <transition name="fade" mode="out-in">
         <router-view></router-view>
        </transition>
       </el-col>
@@ -67,9 +67,9 @@ body{
 }
 a {text-decoration: none;color:none;}
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
+  transition: opacity .3s
 }
 .fade-enter, .fade-leave-active {
-  opacity: 0
+  opacity: 0;
 }
 </style>
