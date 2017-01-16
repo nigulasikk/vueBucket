@@ -5,8 +5,9 @@
     <el-tab-pane label="用户管理" name="first">
      <el-tag>用户管理</el-tag>
     </el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">
-    <el-tag type="gray">配置管理</el-tag>
+    <el-tab-pane label="vuex购物车" name="second">
+       vuex购物车demo    
+       <shopping-cart></shopping-cart>    
     </el-tab-pane>
     <el-tab-pane label="角色管理" name="third">
       <el-tag type="primary">标签三</el-tag>
@@ -25,6 +26,7 @@
 
 <script>
 import TransitionGroupFlip from '../components/TransitionGroupFlip'
+import ShoppingCart from '../components/ShoppingCart/ShoppingCart'
 export default {
   name: 'page2',
   data () {
@@ -33,7 +35,8 @@ export default {
     }
   },
   components: {
-    TransitionGroupFlip
+    TransitionGroupFlip,
+    ShoppingCart
   },
   methods: {
     handleClick (tab, event) {

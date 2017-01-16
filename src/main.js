@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import App from './App'
@@ -36,6 +37,7 @@ const router = new VueRouter({
 // 从而让整个应用都有路由功能
 new Vue({
   router,
+  store,
   template: '<App/>',
   components: { App }
 }).$mount('#app-index')
