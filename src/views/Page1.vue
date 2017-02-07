@@ -1,6 +1,6 @@
 <template>
   <div>
-      page1
+      <h2>page1</h2>
     <router-view></router-view>
   </div>
 </template>

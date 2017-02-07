@@ -1,7 +1,7 @@
 <template>
   <div id="flip-list-demo" class="demo">
-     <button v-on:click="add">Add</button>
-  <button v-on:click="remove">Remove</button>
+     <button id="transition-add" v-on:click="add">Add</button>
+  <button id="transition-remove" v-on:click="remove">Remove</button>
       <transition-group name="list-complete" tag="p">
     <span
       v-for="item in items"

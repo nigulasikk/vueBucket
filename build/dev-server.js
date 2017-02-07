@@ -81,12 +81,12 @@ module.exports = app.listen(port, function (err) {
     console.log(err)
     return
   }
-  var uri = 'http://localhost:' + port
+  var uri = 'http://localhost:' + port + '/#/page1'
   console.log('Listening at ' + uri + '\n')
   
   // 如果不是测试环境，自动打开浏览器并跳到我们的开发地址
   // when env is testing, don't need open it
   if (process.env.NODE_ENV !== 'testing') {
-    opn(uri)
+    opn(uri,{app: 'google chrome'})
   }
 })

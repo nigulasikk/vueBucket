@@ -2,7 +2,10 @@
   <div id="app">
     <el-row class="tac">
       <el-col :span="4">
-        <el-menu default-active="page2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router="true" >
+        <el-menu default-active="page1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router="true" >         
+          <!-- menu组件集成 路由跳转写法 -->
+          <el-menu-item index="page1"><i class="el-icon-menu"></i>Page1</el-menu-item>
+          <el-menu-item index="page2" id="page2"><i class="el-icon-setting"></i> Page2</el-menu-item>
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>导航一</template>
             <el-menu-item-group>
@@ -18,9 +21,6 @@
               <el-menu-item index="1-4-1">选项1</el-menu-item>
             </el-submenu>
           </el-submenu>
-          <!-- menu组件集成 路由跳转写法 -->
-          <el-menu-item index="page1"><i class="el-icon-menu"></i>Page1</el-menu-item>
-          <el-menu-item index="page2"><i class="el-icon-setting"></i> Page2</el-menu-item>
         </el-menu>
         <!-- 手动路由跳转写法 -->
          <!-- <router-link to="/page1"> </router-link> -->
