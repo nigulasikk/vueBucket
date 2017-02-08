@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Hello from 'src/components/Hello'
+import TransitionGroupFlip from 'src/components/TransitionGroupFlip'
 
 describe('Hello.vue', () => {
   it('should render correct contents', () => {
@@ -9,5 +10,12 @@ describe('Hello.vue', () => {
     })
     expect(vm.$el.querySelector('.hello h1').textContent)
       .to.equal('Welcome to Your Vue.js App')
+  })
+})
+
+describe('TransitionGroupFlip.vue', () => {
+  it('TransitionGroupFlip', () => {
+    expect(TransitionGroupFlip.data().items.length)
+      .to.equal(9)
   })
 })
