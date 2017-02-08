@@ -51,6 +51,7 @@ module.exports = {
       .click('#products-list li:nth-of-type(3) .add-to-cart')
       .pause(1000)
       .assert.containsText('#total', '1031')
+      .end()
 
   }
 }
